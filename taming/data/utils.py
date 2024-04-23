@@ -149,7 +149,7 @@ def custom_collate(batch):
         return torch.tensor(batch, dtype=torch.float64)
     elif isinstance(elem, int):
         return torch.tensor(batch)
-    elif isinstance(elem, string_classes):
+    elif isinstance(elem, str): #string_classes):
         return batch
     elif isinstance(elem, collections.abc.Mapping):
         return {key: custom_collate([d[key] for d in batch]) for key in elem}

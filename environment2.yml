@@ -1,0 +1,19 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - python==3.10.14
+  - pip
+  - conda[version='>=24.1.2']
+  - mamba[version='>=1.5.7']
+  - pytorch
+  - pytorch-cuda=11.8
+  - torchaudio
+  - torchvision
+  - optax
+  - transformers
+  - flax=0.8.2
+  - tensorboard
+  - tensorflow
+  - diffusers
+prefix: /home/prabhatkr/miniforge-pypy3
