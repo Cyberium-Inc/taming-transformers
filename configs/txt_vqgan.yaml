@@ -28,7 +28,7 @@ model:
 data:
   target: main.DataModuleFromConfig
   params:
-    batch_size: 32
+    batch_size: 16
     num_workers: 40
     train:
       target: taming.data.txt.Txttrain
