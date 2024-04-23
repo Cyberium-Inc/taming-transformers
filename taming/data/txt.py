@@ -12,7 +12,7 @@ import albumentations
 from omegaconf import OmegaConf
 import cv2
 import json
-from ldm.modules.image_degradation import degradation_fn_bsr, degradation_fn_bsr_light
+#from ldm.modules.image_degradation import degradation_fn_bsr, degradation_fn_bsr_light
 from taming.data.imagenet import str_to_indices, give_synsets_from_indices, download, retrieve
 from taming.data.base import ImagePaths
 
