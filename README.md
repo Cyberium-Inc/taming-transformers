@@ -13,6 +13,11 @@
 ![teaser](assets/teaser.png)
 [arXiv](https://arxiv.org/abs/2012.09841) | [BibTeX](#bibtex) | [Project Page](https://compvis.github.io/taming-transformers/)
 
+### Modernize
+
+https://github.com/huggingface/diffusers/issues/894
+https://github.com/CompVis/taming-transformers/issues/239
+
 
 ### News
 #### 2022
