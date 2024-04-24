@@ -29,7 +29,7 @@ class ClassEmbedder(nn.Module):
             key = self.key
         # this is for use in crossattn
         c = batch[key][:, None]
-        c = self.embedding(c)
+        c = self.embedding(c).to(self.device)
         return c
 
 
