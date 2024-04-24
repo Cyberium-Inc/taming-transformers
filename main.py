@@ -157,6 +157,8 @@ class DataModuleFromConfig(pl.LightningDataModule):
         self.datasets = dict(
             (k, instantiate_from_config(self.dataset_configs[k]))
             for k in self.dataset_configs)
+
+        print("Wrapping: ", self.wrap)
         if self.wrap:
             for k in self.datasets:
                 self.datasets[k] = WrappedDataset(self.datasets[k])
@@ -530,6 +532,9 @@ if __name__ == "__main__":
         # lightning still takes care of proper multiprocessing though
         data.prepare_data()
         data.setup()
+        for k in data.datasets:
+            print(f"{k}, {data.datasets[k].__class__.__name__}, {len(data.datasets[k])}")
+
 
         # configure learning rate
         bs, base_lr = config.data.params.batch_size, config.model.base_learning_rate
