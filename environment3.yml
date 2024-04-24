@@ -1,4 +1,4 @@
-name: taming
+name: taming3
 channels:
   - defaults
   - conda-forge
