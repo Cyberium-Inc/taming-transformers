@@ -430,7 +430,7 @@ if __name__ == "__main__":
     #   params:
     #       key: value
     # data:
-    #   target: main.DataModuleFromConfig
+    #   target: main2.DataModuleFromConfig
     #   params:
     #      batch_size: int
     #      wrap: bool
@@ -462,8 +462,8 @@ if __name__ == "__main__":
     now = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
 
     # add cwd for convenience and to make classes in this file available when
-    # running as `python main.py`
-    # (in particular `main.DataModuleFromConfig`)
+    # running as `python main2.py`
+    # (in particular `main2.DataModuleFromConfig`)
     sys.path.append(os.getcwd())
 
     parser = get_parser()
@@ -594,7 +594,7 @@ if __name__ == "__main__":
         # add callback which sets up log directory
         default_callbacks_cfg = {
             "setup_callback": {
-                "target": "main.SetupCallback",
+                "target": "main2.SetupCallback",
                 "params": {
                     "resume": opt.resume,
                     "now": now,
@@ -606,7 +606,7 @@ if __name__ == "__main__":
                 }
             },
             "image_logger": {
-                "target": "main.ImageLogger",
+                "target": "main2.ImageLogger",
                 "params": {
                     "batch_frequency": 750,
                     "max_images": 4,
@@ -614,14 +614,14 @@ if __name__ == "__main__":
                 }
             },
             "learning_rate_logger": {
-                "target": "main.LearningRateMonitor",
+                "target": "main2.LearningRateMonitor",
                 "params": {
                     "logging_interval": "step",
                     # "log_momentum": True
                 }
             },
             "cuda_callback": {
-                "target": "main.CUDACallback"
+                "target": "main2.CUDACallback"
             },
         }
         if version.parse(pl.__version__) >= version.parse('1.4.0'):
