@@ -25,7 +25,7 @@ model:
 
 
 data:
-  target: main2.DataModuleFromConfig
+  target: main.DataModuleFromConfig
   params:
     batch_size: 12
     num_workers: 47
@@ -44,7 +44,7 @@ data:
 lightning:
   callbacks:
     image_logger:
-      target: main2.ImageLogger
+      target: main.ImageLogger
       params:
         batch_frequency: 1000
         max_images: 8
