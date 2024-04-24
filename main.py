@@ -568,7 +568,7 @@ if __name__ == "__main__":
         # run
         if opt.train:
             try:
-                print("PreTarin:",  data)
+                print("PreTrain:", model, data)
                 trainer.fit(model, data)
             except Exception:
                 melk()
