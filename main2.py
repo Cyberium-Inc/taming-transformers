@@ -535,6 +535,7 @@ if __name__ == "__main__":
 
         # model
         model = instantiate_from_config(config.model)
+        
 
         # trainer and callbacks
         trainer_kwargs = dict()

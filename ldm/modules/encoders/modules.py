@@ -54,8 +54,9 @@ class BERTTokenizer(AbstractEncoder):
     """ Uses a pretrained BERT tokenizer by huggingface. Vocab size: 30522 (?)"""
     def __init__(self, device="cuda", vq_interface=True, max_length=77):
         super().__init__()
-        from transformers import BertTokenizerFast  # TODO: add to reuquirements
-        self.tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+        from transformers import RobertaTokenizerFast, BertTokenizerFast  # TODO: add to reuquirements
+        #self.tokenizer = RobertaTokenizerFast.from_pretrained("bert-base-uncased")
+        self.tokenizer = RobertaTokenizerFast.from_pretrained("/home/prabhatkr/clip-sanskrit-data/checkpoint-28690000")
         self.device = device
         self.vq_interface = vq_interface
         self.max_length = max_length
